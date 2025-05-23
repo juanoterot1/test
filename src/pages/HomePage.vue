@@ -2,13 +2,11 @@
 <template>
   <div class="home-page">
     <BlissHeader />
-
     <div class="content custom-background">
       <div class="home-container">
         <div class="left-container">
           <img src="@/assets/Bliss.png" alt="Logo" class="Bliss-logo-home" />
         </div>
-
         <div class="right-container">
           <h1 class="welcome-title">Bienvenido</h1>
           <div class="menu-grid">
@@ -34,22 +32,26 @@
 import { useRouter } from 'vue-router';
 import {
   CubeIcon,
+  FolderIcon,
   ClipboardDocumentListIcon,
   CurrencyDollarIcon,
   DocumentTextIcon,
-  Cog6ToothIcon,
-  FolderIcon
+  CheckCircleIcon,
+  CreditCardIcon,
+  Cog6ToothIcon
 } from '@heroicons/vue/24/outline';
 
 const router = useRouter();
 
 const menuItems = [
-  { label: 'Servicios',    icon: CubeIcon,                  name: 'services' },
-  { label: 'Catálogo',     icon: FolderIcon,                name: 'catalog'  },
-  { label: 'Solicitudes',  icon: ClipboardDocumentListIcon, name: 'requests' },
-  { label: 'Tarifas',      icon: CurrencyDollarIcon,        name: 'pricing'  },
-  { label: 'Reportes',     icon: DocumentTextIcon,          name: 'reports'  },
-  { label: 'Configuración',icon: Cog6ToothIcon,            name: 'settings' }
+  { label: 'Servicios',        icon: CubeIcon,                  name: 'services'    },
+  { label: 'Catálogo',         icon: FolderIcon,                name: 'catalog'     },
+  { label: 'Solicitudes',      icon: ClipboardDocumentListIcon, name: 'requests'    },
+  { label: 'Tarifas',          icon: CurrencyDollarIcon,        name: 'pricing'     },
+  { label: 'Estado Servicios', icon: CheckCircleIcon,           name: 'status'      },
+  { label: 'Entrega/Pago',     icon: CreditCardIcon,            name: 'integration' },
+  { label: 'Reportes',         icon: DocumentTextIcon,          name: 'reports'     },
+  { label: 'Configuración',    icon: Cog6ToothIcon,             name: 'settings'    }
 ];
 
 function navigate(item) {

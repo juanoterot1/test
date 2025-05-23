@@ -43,7 +43,10 @@ const routes = [
       { path: 'catalog', name: 'catalog', component: () => import('@/pages/CatalogPage.vue') },
       { path: 'pricing', name: 'pricing', component: () => import('@/pages/PricingPage.vue') },
       { path: 'requests',    name: 'requests',   component: () => import('@/pages/RequestsPage.vue') },
-      { path: 'requests/new', name: 'requestNew', component: () => import('@/pages/RequestFormPage.vue') }
+      { path: 'requests/new', name: 'requestNew', component: () => import('@/pages/RequestFormPage.vue') },
+      { path: 'status', name: 'status', component: () => import('@/pages/ServiceStatusPage.vue') },
+      { path: 'integration', name: 'integration', component: () => import('@/pages/IntegrationPage.vue') },
+
 
 
     ]

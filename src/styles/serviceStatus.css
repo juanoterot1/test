@@ -1,0 +1,44 @@
+.status-page {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  background: #f3ddff;
+  font-family: 'Bahnschrift', sans-serif;
+  min-height: 100vh;
+  position: absolute; left:0; right:0; overflow-x:hidden;
+}
+.status-container {
+  max-width: 1280px; margin:0 auto; padding:0 2rem;
+}
+.status-container h1 {
+  color:#6e1b93; text-align:center; margin-bottom:1.5rem;
+  font-size:2.2rem;
+}
+.services-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:24px;
+}
+.status-card {
+  background:white;
+  border:2px solid #bda6f5;
+  border-radius:16px;
+  padding:1.5rem;
+  box-shadow:0 4px 12px rgba(123,31,162,0.25);
+  display:flex; flex-direction:column; gap:0.5rem;
+}
+.state strong {
+  color:#5e4db2; text-transform:capitalize;
+}
+.actions {
+  margin-top:1rem;
+  display:flex; flex-wrap:wrap; gap:0.5rem;
+}
+.actions button {
+  padding:0.4rem 0.8rem;
+  border:none; border-radius:6px;
+  background:#6a1b9a; color:white;
+  cursor:pointer; font-family:'Bahnschrift',sans-serif;
+}
+.actions button:hover {
+  background:#5e4db2;
+}
