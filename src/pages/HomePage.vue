@@ -35,23 +35,25 @@ import {
   FolderIcon,
   ClipboardDocumentListIcon,
   CurrencyDollarIcon,
-  DocumentTextIcon,
   CheckCircleIcon,
   CreditCardIcon,
-  Cog6ToothIcon
+  ReceiptIcon,
+  ChartBarIcon,
+  ShieldCheckIcon
 } from '@heroicons/vue/24/outline';
 
 const router = useRouter();
 
 const menuItems = [
-  { label: 'Servicios',        icon: CubeIcon,                  name: 'services'    },
-  { label: 'Catálogo',         icon: FolderIcon,                name: 'catalog'     },
-  { label: 'Solicitudes',      icon: ClipboardDocumentListIcon, name: 'requests'    },
-  { label: 'Tarifas',          icon: CurrencyDollarIcon,        name: 'pricing'     },
-  { label: 'Estado Servicios', icon: CheckCircleIcon,           name: 'status'      },
-  { label: 'Entrega/Pago',     icon: CreditCardIcon,            name: 'integration' },
-  { label: 'Reportes',         icon: DocumentTextIcon,          name: 'reports'     },
-  { label: 'Configuración',    icon: Cog6ToothIcon,             name: 'settings'    }
+  { label: 'Servicios',     icon: CubeIcon,                  name: 'services'     },
+  { label: 'Catálogo',      icon: FolderIcon,                name: 'catalog'      },
+  { label: 'Solicitudes',   icon: ClipboardDocumentListIcon, name: 'requests'     },
+  { label: 'Tarifas',       icon: CurrencyDollarIcon,        name: 'pricing'      },
+  { label: 'Estado',        icon: CheckCircleIcon,           name: 'status'       },
+  { label: 'Entrega/Pago',  icon: CreditCardIcon,            name: 'integration'  },
+  { label: 'Factura',       icon: ReceiptIcon,               name: 'invoice'      },
+  { label: 'Resumen',       icon: ChartBarIcon,              name: 'summary'      },
+  { label: 'Auditoría',     icon: ShieldCheckIcon,           name: 'audit'        }
 ];
 
 function navigate(item) {

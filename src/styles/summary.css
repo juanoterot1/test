@@ -1,0 +1,45 @@
+.summary-page {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  background: #f3ddff;
+  min-height: 100vh;
+  font-family: 'Bahnschrift', sans-serif;
+  position: absolute; left:0; right:0;
+}
+.page-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.page-container h2 {
+  color: #6e1b93;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+label {
+  display: block;
+  margin: 1rem 0;
+}
+select, button {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Bahnschrift', sans-serif;
+}
+button {
+  background: #6a1b9a;
+  color: white;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.output {
+  background: #e5e0ff;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}

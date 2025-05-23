@@ -46,6 +46,9 @@ const routes = [
       { path: 'requests/new', name: 'requestNew', component: () => import('@/pages/RequestFormPage.vue') },
       { path: 'status', name: 'status', component: () => import('@/pages/ServiceStatusPage.vue') },
       { path: 'integration', name: 'integration', component: () => import('@/pages/IntegrationPage.vue') },
+      { path: 'invoice', name: 'invoice', component: () => import('@/pages/InvoicePage.vue') },
+      { path: 'summary', name: 'summary', component: () => import('@/pages/SummaryPage.vue') },
+      { path: 'audit', name: 'audit', component: () => import('@/pages/AuditPage.vue') }
 
 
 

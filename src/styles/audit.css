@@ -1,0 +1,114 @@
+/* src/styles/audit.css */
+
+/* Página de auditoría */
+.audit-page {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  background: #f3ddff;
+  min-height: 100vh;
+  font-family: 'Bahnschrift', sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.audit-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Título */
+.audit-container h1 {
+  text-align: center;
+  color: #6e1b93;
+  margin-bottom: 1rem;
+}
+
+/* Botón de deshacer */
+.actions-top {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.btn-undo {
+  padding: 0.6rem 1.2rem;
+  background: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-undo:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Grid de tarjetas de servicio */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Tarjeta individual */
+.audit-card {
+  background: white;
+  border: 2px solid #bda6f5;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(123, 31, 162, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* Inputs y botones de modificación */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.card-actions input {
+  flex: 1;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.card-actions button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Botón de eliminar posicionado abajo */
+.card-delete {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.card-delete .danger {
+  padding: 0.4rem 0.8rem;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Mensajes informativos */
+.msg {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #6e1b93;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

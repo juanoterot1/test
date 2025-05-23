@@ -14,8 +14,8 @@ export class RequestCommand {
       return { ok: false, message: result.message };
     }
 
-    // 2) Persistir la solicitud confirmada en localStorage
-    const all = JSON.parse(localStorage.getItem('service_requests') || '[]');
+    // 2) Guardar la solicitud confirmada en localStorage
+    const all = loadRequests();
     const newReq = {
       ...this.requestData,
       id: Date.now(),
@@ -29,7 +29,7 @@ export class RequestCommand {
 
   undo() {
     // Cancela (borra) la solicitud
-    let all = JSON.parse(localStorage.getItem('service_requests') || '[]');
+    let all = loadRequests();
     all = all.filter(r => r.id !== this.requestData.id);
     localStorage.setItem('service_requests', JSON.stringify(all));
   }
@@ -80,7 +80,11 @@ export class ServiceTypeHandler extends Handler {
 
 export class LocationHandler extends Handler {
   handle(req) {
-    if (req.location && req.service.location && req.location !== req.service.location) {
+    if (
+      req.location &&
+      req.service.location &&
+      req.location !== req.service.location
+    ) {
       return { ok: false, message: 'Ubicación fuera de cobertura.' };
     }
     return super.handle(req);
@@ -95,4 +99,9 @@ export function createRequestChain() {
   const loc   = new LocationHandler();
   avail.setNext(sched).setNext(type).setNext(loc);
   return avail;
+}
+
+// ——— Helper para cargar todas las solicitudes ———
+export function loadRequests() {
+  return JSON.parse(localStorage.getItem('service_requests') || '[]');
 }
