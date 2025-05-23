@@ -114,15 +114,21 @@ margin-left:-30px;
 }
 
 /* Estilo de la grilla de tarjetas */
+/* Estilo de la grilla de tarjetas: 3 columnas, centro automático */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* Ahora 3 columnas iguales */
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   width: 100%;
   max-width: 700px;
+  /* Centrar la grilla completa dentro del contenedor */
+  justify-content: center;
+  /* Cada tarjeta centrada en su celda */
   justify-items: center;
   margin-bottom: 2rem;
 }
+
 
 /* Íconos dentro de las tarjetas */
 .menu-icon {

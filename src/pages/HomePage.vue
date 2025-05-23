@@ -1,26 +1,22 @@
+<!-- src/pages/HomePage.vue -->
 <template>
   <div class="home-page">
-    <!-- Componente de encabezado -->
     <BlissHeader />
 
     <div class="content custom-background">
       <div class="home-container">
-        <!-- Contenedor para el logo -->
         <div class="left-container">
           <img src="@/assets/Bliss.png" alt="Logo" class="Bliss-logo-home" />
         </div>
 
-        <!-- Contenedor para el texto "Bienvenido" y las tarjetas -->
         <div class="right-container">
           <h1 class="welcome-title">Bienvenido</h1>
-
-          <!-- Tarjetas de navegación -->
           <div class="menu-grid">
             <div
               class="menu-card"
               v-for="item in menuItems"
-              :key="item.label"
-              @click="mostrarAlerta(item.label)"
+              :key="item.name"
+              @click="navigate(item)"
             >
               <span class="menu-icon">
                 <component :is="item.icon" />
@@ -34,31 +30,28 @@
   </div>
 </template>
 
-
-
 <script setup>
-import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-
-import { CubeIcon, UsersIcon, MapIcon, ShoppingCartIcon, BuildingOfficeIcon } from '@heroicons/vue/24/outline';
+import {
+  CubeIcon,
+  ClipboardDocumentListIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
+  Cog6ToothIcon
+} from '@heroicons/vue/24/outline';
 
 const router = useRouter();
-
 const menuItems = [
-  { label: 'Gestión de Inventario', icon: CubeIcon, route: '/productos' },
-  { label: 'Gestión de Clientes', icon: UsersIcon, route: '/clients' },
-  { label: 'Gestión de Rutas', icon: MapIcon, route: '/routes' },
-  { label: 'Gestión de Proveedores', icon: BuildingOfficeIcon, route: '/providers' }
+  { label: 'Servicios',   icon: CubeIcon,                  name: 'services' },
+  { label: 'Solicitudes', icon: ClipboardDocumentListIcon, name: 'requests'  /* crea luego RequestsPage.vue */ },
+  { label: 'Tarifas',     icon: CurrencyDollarIcon,        name: 'pricing'   /* crea luego PricingPage.vue  */ },
+  { label: 'Reportes',    icon: DocumentTextIcon,          name: 'reports'   /* crea luego ReportsPage.vue  */ },
+  { label: 'Configuración',icon: Cog6ToothIcon,            name: 'settings'  /* crea luego SettingsPage.vue */ }
 ];
 
-const mostrarAlerta = (label) => {
-  const item = menuItems.find(i => i.label === label);
-  if (item?.route) {
-    router.push(item.route).catch((err) => console.log(err));
-  } else {
-    alert(`Has presionado: ${label}`);
-  }
-};
+function navigate(item) {
+  router.push({ name: item.name }).catch(()=>{});
+}
 </script>
 
 <style scoped src="@/styles/home.css"></style>

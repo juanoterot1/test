@@ -1,0 +1,134 @@
+/* Igual que en articulos.css pero adaptado a servicios */
+main {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+  background-color: #f3ddff;
+  position: absolute;
+  left: 0; right: 0;
+  overflow-x: hidden;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+/* Título y botón */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto 30px;
+  padding: 0 2rem;
+}
+.page-header h1 {
+  font-size: 2.2rem;
+  color: #6e1b93;
+}
+.icono-boton {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #6e1b93;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform .2s ease;
+}
+.icono-boton:hover {
+  transform: translateY(-2px);
+}
+.icono-btn {
+  width: 40px;
+  height: 40px;
+  color: #6b21a8;
+}
+
+/* Mensaje cuando no hay servicios */
+.no-services {
+  text-align: center;
+  color: #6e1b93;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+/* Grid de tarjetas */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+/* Tarjeta de servicio */
+.service-card {
+  position: relative;
+  background: linear-gradient(135deg, #d7c9f7cc, #f3e8ffcc);
+  border: 2px solid #bda6f5;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(189, 166, 245, 0.25);
+  cursor: pointer;
+  transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
+}
+.service-card:hover {
+  background: linear-gradient(135deg, #cbb9f7ee, #e8d9ffee);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(189, 166, 245, 0.4);
+}
+
+/* Badge “★ BLISS” */
+.service-card::before {
+  content: "★ BLISS";
+  position: absolute;
+  top: 10px; left: 20px;
+  background-color: #bda6f5;
+  color: white;
+  font-size: .85rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(189, 166, 245, .4);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+/* Contenido */
+.service-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #5e4db2;
+  margin-bottom: .5rem;
+}
+.service-desc {
+  font-size: 1rem;
+  color: #584d7a;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Acciones internas (editar / clonar) */
+.card-actions {
+  display: flex;
+  gap: 1rem;
+}
+.card-actions a {
+  font-size: 1.2rem;
+  color: #6a1b9a;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.card-actions a:hover {
+  color: #3d1368;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

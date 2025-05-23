@@ -33,10 +33,13 @@ const routes = [
       { path: 'productos/:id', name: 'detalleArticulo', component: () => import('@/pages/DetalleArticulo.vue') },
       { path: 'carrito', component: () => import('@/pages/CarritoPage.vue') },
       { path: 'providers', name: 'providers', component: () => import('@/pages/ProvidersPage.vue') },
-      {
-        path: '/providerDetail/:id', name: 'providerDetail', component: () => import('@/pages/ProviderDetailPage.vue')
-      }
+      { path: 'providerDetail/:id', name: 'providerDetail', component: () => import('@/pages/ProviderDetailPage.vue') },
 
+      // ← Aquí agregamos las rutas de Servicios
+      { path: 'services',           name: 'services',     component: () => import('@/pages/ServicesPage.vue') },
+      { path: 'services/new',       name: 'serviceNew',   component: () => import('@/pages/ServiceFormPage.vue') },
+      { path: 'services/:id/edit',  name: 'serviceEdit',  component: () => import('@/pages/ServiceFormPage.vue') },
+      { path: 'services/:id/clone', name: 'serviceClone', component: () => import('@/pages/ServiceClonePage.vue') }
     ]
   },
 
