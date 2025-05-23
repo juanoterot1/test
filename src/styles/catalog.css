@@ -1,0 +1,23 @@
+.catalog-page {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+  background-color: #f3ddff;
+  font-family: 'Bahnschrift', sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+.catalog-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.catalog-container h1 {
+  font-size: 2.2rem;
+  color: #6e1b93;
+  margin-bottom: 1rem;
+}

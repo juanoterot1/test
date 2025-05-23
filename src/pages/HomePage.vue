@@ -37,20 +37,23 @@ import {
   ClipboardDocumentListIcon,
   CurrencyDollarIcon,
   DocumentTextIcon,
-  Cog6ToothIcon
+  Cog6ToothIcon,
+  FolderIcon
 } from '@heroicons/vue/24/outline';
 
 const router = useRouter();
+
 const menuItems = [
-  { label: 'Servicios',   icon: CubeIcon,                  name: 'services' },
-  { label: 'Solicitudes', icon: ClipboardDocumentListIcon, name: 'requests'  /* crea luego RequestsPage.vue */ },
-  { label: 'Tarifas',     icon: CurrencyDollarIcon,        name: 'pricing'   /* crea luego PricingPage.vue  */ },
-  { label: 'Reportes',    icon: DocumentTextIcon,          name: 'reports'   /* crea luego ReportsPage.vue  */ },
-  { label: 'Configuración',icon: Cog6ToothIcon,            name: 'settings'  /* crea luego SettingsPage.vue */ }
+  { label: 'Servicios',    icon: CubeIcon,                  name: 'services' },
+  { label: 'Catálogo',     icon: FolderIcon,                name: 'catalog'  },
+  { label: 'Solicitudes',  icon: ClipboardDocumentListIcon, name: 'requests' },
+  { label: 'Tarifas',      icon: CurrencyDollarIcon,        name: 'pricing'  },
+  { label: 'Reportes',     icon: DocumentTextIcon,          name: 'reports'  },
+  { label: 'Configuración',icon: Cog6ToothIcon,            name: 'settings' }
 ];
 
 function navigate(item) {
-  router.push({ name: item.name }).catch(()=>{});
+  router.push({ name: item.name }).catch(() => {});
 }
 </script>
 
