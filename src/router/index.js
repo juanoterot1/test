@@ -40,7 +40,11 @@ const routes = [
       { path: 'services/new',       name: 'serviceNew',   component: () => import('@/pages/ServiceFormPage.vue') },
       { path: 'services/:id/edit',  name: 'serviceEdit',  component: () => import('@/pages/ServiceFormPage.vue') },
       { path: 'services/:id/clone', name: 'serviceClone', component: () => import('@/pages/ServiceClonePage.vue') },
-      { path: 'catalog', name: 'catalog', component: () => import('@/pages/CatalogPage.vue') }
+      { path: 'catalog', name: 'catalog', component: () => import('@/pages/CatalogPage.vue') },
+      { path: 'pricing', name: 'pricing', component: () => import('@/pages/PricingPage.vue') },
+      { path: 'requests',    name: 'requests',   component: () => import('@/pages/RequestsPage.vue') },
+      { path: 'requests/new', name: 'requestNew', component: () => import('@/pages/RequestFormPage.vue') }
+
 
     ]
   },

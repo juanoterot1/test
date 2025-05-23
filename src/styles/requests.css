@@ -1,0 +1,88 @@
+/* Base */
+main {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+  font-family: 'Bahnschrift', sans-serif;
+  background-color: #f3ddff;
+  position: absolute; left: 0; right: 0; overflow-x: hidden;
+}
+
+/* Formulario de solicitud */
+.request-page .form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.request-page h2 {
+  text-align: center;
+  color: #6e1b93;
+  margin-bottom: 1rem;
+}
+.request-page label {
+  display: block;
+  margin: 0.8rem 0;
+}
+.request-page input,
+.request-page select,
+.request-page textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.request-page .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.request-page .buttons button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.request-page .buttons button:first-child { background: #eee; }
+.request-page .buttons button:last-child { background: #6a1b9a; color: white; }
+.request-page .result {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+.request-page .result.error { color: #d32f2f; }
+
+/* Lista de solicitudes */
+.requests-list-page .list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.requests-list-page h2 {
+  color: #6e1b93;
+  margin-bottom: 1rem;
+}
+.requests-list-page .empty {
+  text-align: center;
+  color: #6e1b93;
+}
+.requests-list {
+  list-style: none;
+  padding: 0;
+}
+.request-card {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #bda6f5;
+  box-shadow: 0 4px 12px rgba(189,166,245,0.2);
+}
+.request-card p {
+  margin: 0.3rem 0;
+}
