@@ -1,0 +1,491 @@
+/* Contenedor general */
+.provider-detail-page {
+  --background: #f3ddff;
+  background-color: var(--background);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 180px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+/* Tarjeta principal del proveedor */
+.provider-card {
+  background: linear-gradient(145deg, #f3ddff, #e7c9ff);
+  border: 2px solid #b480e0;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(160, 72, 208, 0.25);
+  max-width: 400px;
+  width: 100%;
+  padding: 20px 24px 32px 24px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  word-wrap: break-word;
+
+}
+
+.provider-card:hover {
+  box-shadow: 0 18px 36px rgba(128, 0, 128, 0.35);
+}
+
+/* Nombre del proveedor con ícono */
+.provider-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5d1692;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  user-select: none;
+}
+
+/* Iconos inline */
+.icon-inline {
+  color: #a048d0;
+  width: 24px;
+  height: 24px;
+}
+
+/* Filas de info (email, teléfono, contacto) */
+.provider-row {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  color: #4b004b;
+  user-select: text;
+   flex-wrap: wrap;
+}
+
+.provider-row strong {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  font-weight: 600;
+  color: #6e1b93;
+  min-width: 90px;
+}
+
+
+/* Contenedor y estilo botón Editar */
+.edit-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  margin-left: -10px;
+}
+
+
+/*boton editar*/
+.edit-button {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  border-radius: 40%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #6e1b9a;
+  color: #6a1b9a;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  margin-left: 15px;
+
+}
+
+.edit-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Sección historial ventas */
+.sales-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 3% auto 0;
+  background: rgba(243, 232, 255, 0.85);
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(123, 31, 162, 0.3);
+  border: 2px solid rgba(123, 31, 162, 0.2);
+  color: #4a3c71;
+  font-family: 'Bahnschrift', sans-serif;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+
+.sales-section h3 {
+  font-size: 1.5rem;
+  color: #5d1692;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Item de venta */
+.sale-item {
+  background: linear-gradient(145deg, #e7c9ff, #d5b3ff);
+  border: 2px solid #b480e0; /* borde violeta suave */
+  border-radius: 24px; /* un poco más redondeado */
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 20px rgba(128, 0, 128, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.sale-item:hover {
+  box-shadow: 0 14px 32px rgba(128, 0, 128, 0.3);
+  transform: translateY(-4px);
+}
+
+.sale-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #4b004b;
+  font-size: 1rem;
+  min-width: 200px;
+  user-select: text;
+}
+
+.sale-text strong {
+  color: #6e1b93;
+  font-weight: 700;
+}
+
+/* Botones */
+/* Estilo base para los botones */
+.sale-buttons button {
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Iconos por defecto (violeta oscuro) */
+.sale-buttons .icon-inline {
+  color: #6e1b93;
+  transition: color 0.3s ease;
+}
+
+/* Hover editar venta */
+.sale-buttons .edit-btn:hover .icon-inline {
+  color: #1e88e5; /* azul */
+}
+
+/* Hover eliminar venta */
+.sale-buttons .delete-btn:hover .icon-inline {
+  color: #e53935; /* rojo */
+}
+
+
+/* Botón agregar venta */
+.add-sale {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  border-radius: 40%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #6e1b9a;
+  color: #6a1b9a;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto
+}
+
+.add-sale:hover {
+   transform: translateY(-2px);
+}
+
+/*modal*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(190, 185, 230, 0.5); /* Fondo semitransparente púrpura pastel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+/* Caja principal del modal */
+.modal {
+  background-color: #fceaff; /* Fondo lavanda claro */
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(123, 31, 162, 0.4); /* Sombra púrpura suave */
+  font-family: 'Bahnschrift', sans-serif;
+  color: #6e1b93; /* Morado oscuro */
+  text-align: center;
+  position: relative;
+}
+
+/* Título del modal */
+.modal h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #6e1b93;
+}
+
+/* Inputs dentro del modal */
+.modal input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin: 0.4rem 0 1rem 0;
+  border-radius: 12px;
+  border: 2px solid #6e1b93;
+  font-size: 1rem;
+  font-family: 'Bahnschrift', sans-serif;
+  color: #6e1b93;
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
+
+.modal input:focus {
+  outline: none;
+  border-color: #9c27b0; /* Morado un poco más brillante al enfocar */
+}
+
+/* Contenedor de botones, columna centrada con separación */
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: nowrap;
+}
+
+/* Botones del modal (confirmar y cancelar comparten base) */
+.btn-confirmar,
+.btn-cancelar {
+  padding: 0.8rem 1rem; 
+  border-radius: 16px;
+  border: 2px solid #6e1b93;
+  background-color: white;
+  color: #6e1b93;
+  font-weight: 600;
+  font-family: 'Bahnschrift', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 180px; 
+  max-width: 260px;
+  font-size: 1.1rem;
+  text-align: center;
+  user-select: none;
+}
+
+/* Hover para ambos botones */
+.btn-confirmar:hover,
+.btn-cancelar:hover {
+  background-color: #e5e7eb;
+}
+
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .provider-detail-page {
+    padding: 110px 20px; /* antes tenías 180px */
+  }
+
+  .sales-section {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .edit-button-container {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sale-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sale-text {
+    min-width: unset;
+    font-size: 0.9rem;
+  }
+
+  .sale-buttons {
+    align-self: flex-end;
+  }
+}
+
+/* Móviles pequeños */
+@media screen and (max-width: 480px) {
+  .provider-detail-page {
+    padding: 100px 12px;
+  }
+
+  .provider-card {
+    padding: 0.8rem;
+  }
+
+  .provider-name {
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .provider-row {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sales-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .sale-text {
+    font-size: 0.85rem;
+  }
+
+  .edit-button,
+  .add-sale {
+    width: 60px;
+    height: 60px;
+  }
+
+  .modal {
+    padding: 1rem;
+  }
+
+  .btn-confirmar,
+  .btn-cancelar {
+    min-width: 140px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .provider-detail-page {
+    padding: 40px 12px 40px 12px;
+  }
+
+  .provider-card {
+    padding: 1rem;
+  }
+
+  .provider-name {
+    font-size: 1rem;
+    gap: 8px;
+    flex-wrap: wrap;
+    word-break: break-word;
+  }
+
+  .provider-row {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    word-break: break-word;
+  }
+
+  .provider-row strong {
+    min-width: auto;
+    font-size: 0.95rem;
+  }
+
+  .edit-button-container {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .edit-button {
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .sales-section {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .sale-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sale-text {
+    min-width: 0;
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .sale-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .add-sale {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .modal {
+    padding: 1.5rem;
+  }
+
+  .modal h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal input {
+    font-size: 0.9rem;
+  }
+
+  .btn-confirmar,
+  .btn-cancelar {
+    font-size: 1rem;
+    min-width: 140px;
+    padding: 0.6rem 0.8rem;
+  }
+}
+

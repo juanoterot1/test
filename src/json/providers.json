@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Distribuidora A",
+      "contact": "Andres Felipe",
+      "phone": "3104247996",
+      "email": "andres@correo.com",
+      "route": "Ruta 1"
+    },
+    {
+      "id": 2,
+      "name": "Proveedor B",
+      "contact": "Juan Otero",
+      "phone": "3109876543",
+      "email": "juan@correo.com",
+      "route": "Ruta 2"
+    },
+    {
+        "id": 3,
+        "name": "Proveedor C",
+        "contact": "Duvan Rodriguez",
+        "phone": "3109876543",
+        "email": "duvan@correo.com",
+        "route": "Ruta 3"
+      }
+  ]
+  

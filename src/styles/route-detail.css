@@ -1,0 +1,630 @@
+.routes-detail-page {
+  --background: #f3ddff;
+  background-color: var(--background);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 140px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  overflow-y: auto;
+  padding-bottom: 100px;
+}
+
+.top-section {
+  margin-top: 20px;
+}
+
+.ruta-card {
+  background: linear-gradient(145deg, #f3ddff, #e7c9ff);
+  border: 2px solid #b480e0;
+  box-shadow: 0 12px 28px rgba(160, 72, 208, 0.25);
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto 16px auto;
+  padding: 0 0 32px 0;
+  position: relative;
+}
+
+.ruta-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 18px 36px rgba(128, 0, 128, 0.35);
+}
+
+.ruta-header {
+  border: 2px solid #b480e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2d9ff;
+  padding: 12px 20px;
+  border-radius: 20px;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(123, 31, 162, 0.15);
+  margin: 12px 20px;
+}
+
+.nombre-con-icono {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ruta-nombre {
+  font-size: 1.6rem;
+  color: #5d1692;
+  font-weight: 600;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+.ruta-icon {
+  font-size: 1.6rem;
+  color: #a048d0;
+}
+
+.chip-id {
+  background: #e6ccff;
+  color: #6e1b93;
+  padding: 8px 14px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 3px 6px rgba(160, 72, 208, 0.1);
+  border: 1px solid #c79aff;
+  font-family: 'Bahnschrift', sans-serif;
+  
+  
+}
+
+.ruta-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 24px 44px 24px;
+  font-family: 'Bahnschrift', sans-serif;
+  
+}
+
+.ficha-item {
+  background: rgba(255, 240, 255, 0.4);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  padding: 14px 20px;
+  border: 1px solid rgba(180, 120, 255, 0.2);
+  box-shadow: 0 2px 6px rgba(160, 72, 208, 0.12);
+  font-size: 1.1rem;
+  color: #4b004b;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+    word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+.icon {
+  color: #a048d0;
+  font-size: 1.3rem;
+}
+
+/*estilo del estado*/
+.chip {
+  background-color: #f3e0ff;
+  color: #5a007a;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(180, 120, 255, 0.1);
+}
+
+.chip-icon {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.chip-verde {
+   border: 2px solid #008020;
+  background-color: #d2f8dd;
+  color: #258e45;
+}
+
+.chip-roja {
+   border: 2px solid #802600;
+  background-color: #fde2e2;
+  color: #c70039;
+}
+
+/* Botón editar (modificar ruta) */
+.fab-button {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #800080;
+  box-shadow: 0 4px 12px rgba(128, 0, 128, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #800080;
+  font-size: 20px;
+  margin: 10px auto 0 auto;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.fab-button:hover {
+  box-shadow: 0 6px 16px rgba(128, 0, 128, 0.3);
+}
+
+/* Botón asignar cliente debajo de la tarjeta */
+.boton-asignar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.boton-asignar-cliente {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #800080;
+  box-shadow: 0 4px 12px rgba(128, 0, 128, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #800080;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  margin-top: 20px;
+}
+
+.boton-asignar-cliente:hover {
+  box-shadow: 0 6px 16px rgba(128, 0, 128, 0.3);
+}
+
+
+.eliminar-cliente {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #c70039;
+  font-size: 1.2rem;
+}
+
+/*estilos para el cliente asignado*/
+.clientes-asignados {
+  max-width: 380px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+.clientes-asignados h3 {
+  font-size: 1.4rem;
+  color: #5d1692;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.cliente-item {
+  background-color: #ede0ff;
+  border-radius: 16px;
+  padding: 16px 22px;
+  color: #5d1692;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 0 12px rgba(160, 72, 208, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  transition: box-shadow 0.3s ease;
+  max-width: 100%;
+  overflow: hidden;
+  word-break: break-word;
+  margin-left: -20px;
+  margin-right: 20px;
+}
+
+.cliente-item:hover {
+  box-shadow: 0 0 24px rgba(160, 72, 208, 0.7);
+}
+
+
+.cliente-item span {
+  font-weight: 500;
+   margin-right: 10px;  
+}
+
+.eliminar-cliente {
+  background-color: transparent;
+  border: none;
+  color: #c70039;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  flex: 0 0 auto;       
+  padding: 6px;
+}
+
+.eliminar-cliente:hover {
+  color: #a3002b;
+}
+
+/* Fondo  para el modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(190, 185, 230, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+/* Contenedor del modal */
+.custom-alert {
+  background-color: #fceaff;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(123, 31, 162, 0.4);
+  font-family: 'Bahnschrift', sans-serif;
+  color: #6e1b93;
+  text-align: center;
+  position: relative;
+}
+
+/* Estilo para títulos del modal */
+.custom-alert h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #6e1b93;
+}
+
+/* Inputs dentro del modal */
+.custom-alert input[type="text"] {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  border: 2px solid #6e1b93;
+  font-size: 1rem;
+  font-family: 'Bahnschrift', sans-serif;
+  color: #6e1b93;
+  box-sizing: border-box;
+}
+
+/* Contenedor de botones centrados vertical y horizontalmente */
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: nowrap;
+}
+
+/* Estilo básico para botones */
+.modal-buttons button {
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  border: 2px solid #6e1b93;
+  background-color: white;
+  color: #6e1b93;
+  font-weight: 600;
+  font-family: 'Bahnschrift', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 180px;
+  max-width: 260px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Hover para botones */
+.modal-buttons button:hover {
+  background-color: #f3e0ff;
+  color: #7b1fa2;
+}
+
+/*estilos para el modal de editar ruta*/
+
+.editar-modal {
+  max-width: 420px;
+  padding: 2.5rem 3rem;
+  background-color: #fdf0ff;
+  box-shadow: 0 6px 25px rgba(123, 31, 162, 0.5);
+  border-radius: 24px;
+  font-family: 'Bahnschrift', sans-serif;
+  color: #5a1486;
+}
+
+.editar-modal h2 {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #5a1486;
+  text-align: center;
+}
+
+.editar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.form-input:focus {
+  outline: none;  
+  border-color: #9f4de0;
+  box-shadow: 0 0 8px rgba(159, 77, 224, 0.6);
+}
+
+
+.form-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #5a1486;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.form-input {
+  padding: 0.85rem 1.3rem;
+  font-size: 1.2rem;
+  border: 2.5px solid #7b2bbe;
+  border-radius: 16px;
+  font-family: 'Bahnschrift', sans-serif;
+  color: #5a1486;
+  transition: border-color 0.3s ease;
+  outline-offset: 2px;
+}
+
+.form-input:focus {
+  border-color: #9f4de0;
+  box-shadow: 0 0 8px rgba(159, 77, 224, 0.6);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.modal-buttons button {
+  min-width: 140px;
+  font-size: 1.15rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 20px;
+  border: 2px solid #7b2bbe;
+  background-color: white;
+  color: #7b2bbe;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-buttons button:hover {
+  background-color: #f5e0ff;
+  color: #9f4de0;
+}
+
+.modal-buttons button[type="button"] {
+  border-color: #7b2bbe;  
+  color: #7b2bbe;
+  font-weight: 700;
+  background-color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-buttons button[type="button"]:hover {
+  background-color: #f5e0ff;
+  color: #9f4de0;
+}
+
+
+
+/*estilos para ver los clientes disponibles*/
+.clientes-modal-list {
+  
+  margin-top: 1.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 1.25rem;
+  color: #5d1692;
+  font-weight: 600;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+.cliente-modal-item {
+  border: 2px solid #b480e0;
+  background-color: #f8e7ff;
+  border-radius: 16px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 12px rgba(180, 120, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.cliente-modal-item:hover {
+  box-shadow: 0 8px 24px rgba(160, 72, 208, 0.3);
+}
+
+.checkbox-item label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Botón eliminar */
+.modal-buttons button.danger {
+  border-color: #d32f2f;
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+.modal-buttons button.danger:hover {
+  background-color: #f8d7da;
+  color: #b71c1c;
+}
+
+@media (max-width: 600px) {
+
+  .routes-detail-page {
+    padding: 16px;
+  }
+
+  .ruta-card {
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 15px;
+    word-break: break-word;
+  }
+
+    .ruta-nombre {
+    font-size: 1.1rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+
+   .ruta-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .nombre-con-icono {
+    font-size: 1.3rem;
+    gap: 6px;
+  }
+
+  .chip-id {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+  .ruta-info {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .chip {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+    .ficha-item {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+   .ficha-item span {
+    flex: 1;
+    word-break: break-word;
+  }
+
+  .fab-button {
+    bottom: 25px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .boton-asignar-contenedor {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .boton-asignar-cliente {
+    width: 48px;
+    height: 48px;
+  }
+
+  .clientes-asignados {
+    margin-top: 20px;
+  }
+
+  .clientes-asignados h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .cliente-item {
+    font-size: 1rem;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .eliminar-cliente {
+    padding: 6px;
+  }
+
+  /* Modal */
+  .custom-alert {
+    max-width: 90vw;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .custom-alert h2 {
+    font-size: 1.4rem;
+  }
+
+  .custom-alert input[type="text"],
+  .custom-alert input[type="number"] {
+    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .modal-buttons button {
+    font-size: 1rem;
+    min-width: 120px;
+    padding: 0.7rem 1rem;
+  }
+}

@@ -1,0 +1,42 @@
+/* Estilo general del footer */
+.bliss-footer {
+    background: linear-gradient(145deg, #fceeff, #e6ccff); /* Mismo fondo de gradiente que el header */
+    text-align: center;
+    padding: 1rem 2rem; /* Espaciado */
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: fixed; /* Fijar el footer en la parte inferior de la pantalla */
+    bottom: 0; /* Asegurarse de que se quede en la parte inferior */
+    left: 0;
+    right: 0;
+    z-index: 999; /* Para asegurarse de que el footer esté visible por encima de otros elementos */
+    border-top: 4px solid #7c3aed; /* Línea superior de color púrpura */
+    
+  }
+  
+  /* Estilo del texto dentro del footer */
+  .footer-text {
+    color: #7c3aed; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    font-family: 'Bahnschrift', sans-serif; /* Mismo tipo de fuente que el header */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin: 0; /* Sin margen */
+  }
+  
+  /* Clase de contenedor principal (para evitar que el footer tape el contenido) */
+  .layout {
+    padding-bottom: 100px; /* Deja espacio suficiente para que el footer no se solape */
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .bliss-footer {
+      padding: 0.5rem 1rem; /* Reducir el padding en pantallas pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bliss-footer {
+      padding: 0.5rem; /* Reducir más el padding en pantallas muy pequeñas */
+    }
+  }
+  

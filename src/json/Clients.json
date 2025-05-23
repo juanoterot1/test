@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan Otero",
+    "direccion": "Calle 123 #45-67",
+    "telefono": "3126006315",
+    "correo": "otero@example.com",
+    "estadoCuenta": 5000,
+    "historialPedidos": [
+      { "fecha": "2025-04-01", "producto": "Producto A", "monto": 20000 }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Duvan Rodriguez",
+    "direccion": "Carrera 5 #21-10",
+    "telefono": "3176961619",
+    "correo": "duvan@example.com",
+    "estadoCuenta": 0,
+    "historialPedidos": []
+  },
+  {
+    "id": 3,
+    "nombre": "Andres Vivas",
+    "direccion": "Avenida 742",
+    "telefono": "3001234567",
+    "correo": "andres@example.com",
+    "estadoCuenta": 15000,
+    "historialPedidos": [
+      { "fecha": "2025-04-05", "producto": "Producto B", "monto": 35000 },
+      { "fecha": "2025-04-10", "producto": "Producto C", "monto": 15000 },
+      { "fecha": "2025-04-05", "producto": "Producto D", "monto": 55000 },
+      { "fecha": "2025-04-10", "producto": "Producto E", "monto": 20000 }
+    ]
+  }
+]

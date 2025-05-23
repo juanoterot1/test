@@ -1,0 +1,219 @@
+/* Fondo personalizado */
+.custom-background {
+  --background: #f3ddff;
+  background-color: var(--background);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra el contenido verticalmente */
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 1; 
+  
+}
+
+/* Contenedor principal para logo y tarjetas */
+.home-container {
+  display: flex;
+  justify-content: space-between; /* Deja espacio entre el logo y las tarjetas */
+  align-items: flex-start; /* Alinea los elementos arriba */
+  width: 100%;
+  max-width: 1200px; /* Limita el tamaño máximo */
+  margin: 0 auto;
+  padding-top: 30px; /* Espacio superior */
+  padding-bottom: 30px; /* Espacio inferior */
+  box-sizing: border-box;
+}
+
+/* Contenedor del logo */
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30%; 
+  padding-right: 20px;
+}
+
+/* Logo */
+.Bliss-logo-home {
+  width: 450px;
+  height: auto;
+  margin-top: 90px;
+  border: 2px solid #7b1fa2;
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 8px;
+  box-shadow: 0 0 15px rgba(123, 31, 162, 0.4);
+  margin-left: -90px; 
+}
+
+/* Contenedor de texto y tarjetas */
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 65%; 
+}
+
+/* Título "Bienvenido" */
+.welcome-title {
+  font-size: 2.2rem; /* Aumenta el tamaño del título */
+  color: #7b1fa2;
+  margin-top: 100px;
+  margin-bottom: 40px; 
+  font-family: 'Bahnschrift', sans-serif;
+  margin-top: 50px;
+}
+
+/* Estilo de las tarjetas */
+.menu-card {
+  background-color: #faf5ff;
+  border-radius: 0 20px 0 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(123, 97, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.menu-card:hover {
+  background-color: #ede9fe;
+  transform: scale(1.03);
+}
+
+
+.menu-card svg {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 16px;
+  color: #9c27b0;
+}
+
+.menu-card span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7b1fa2;
+}
+
+.menu-card p {
+  color: #7c3aed;
+  font-weight: 400;
+  margin: 10px;
+  font-family: 'Bahnschrift', sans-serif;
+  font-size: 1.2rem;
+}
+
+.menu-single{
+margin-left:-30px;
+
+}
+
+/* Estilo de la grilla de tarjetas */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 100%;
+  max-width: 700px;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Íconos dentro de las tarjetas */
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  color: #9b4de0;
+  margin-bottom: 1rem;
+}
+
+/* Párrafos generales dentro del home */
+p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+
+  .Bliss-logo-home {
+    width: 300px; /* Ajusta el tamaño del logo para pantallas pequeñas */
+    margin-top: 50px; /* Aumenta el margen superior para evitar que se tape con el header */
+    margin-left: 0; /* Elimina el desplazamiento izquierdo */
+  }
+  .home-container {
+    flex-direction: column; /* Pone los elementos uno encima del otro */
+    align-items: center; /* Centra los elementos */
+    padding: 20px;
+  }
+
+  .left-container {
+    width: 80%; /* Aumenta el ancho para pantallas pequeñas */
+    margin-bottom: 20px; /* Agrega un poco de espacio inferior */
+  }
+
+  .Bliss-logo-home {
+    width: 300px; /* Ajusta el tamaño del logo para pantallas pequeñas */
+    margin-top: 20px; /* Ajusta la parte superior */
+    margin-left: 0; /* Elimina el desplazamiento izquierdo */
+  }
+
+  .right-container {
+    width: 100%; /* Asegura que ocupe el 100% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .welcome-title {
+    font-size: 1.8rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    margin-top: 30px; /* Ajusta el margen superior */
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr; /* Cambia las columnas a 1 en pantallas pequeñas */
+    gap: 20px; /* Reduce el espacio entre las tarjetas */
+    max-width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+
+  .menu-card {
+    width: 100%;
+    padding: 1.2rem; /* Ajusta el padding de las tarjetas */
+  }
+
+  .menu-single {
+    width: 100%;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles muy pequeños) */
+@media screen and (max-width: 480px) {
+
+  .Bliss-logo-home {
+    margin-top: 100px; /* Aumenta el margen superior en pantallas más pequeñas */
+  }
+  .home-container {
+    padding: 10px; /* Reduce el padding para pantallas muy pequeñas */
+  }
+
+  .Bliss-logo-home {
+    width: 200px; /* Ajusta aún más el tamaño del logo */
+  }
+
+  .welcome-title {
+    font-size: 1.6rem; /* Reduce aún más el tamaño del título */
+    margin-top: 20px;
+  }
+
+  .menu-card {
+    padding: 1rem; /* Reduce el padding de las tarjetas */
+  }
+}

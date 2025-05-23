@@ -1,0 +1,468 @@
+/* Fondo general */
+.clients-page {
+  --background: #f3ddff;
+  background-color: var(--background);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 140px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  overflow-y: auto;
+  padding-bottom: 100px;
+
+}
+
+
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+
+
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  gap: 20px;
+}
+
+/*estilos para el logo*/
+
+.fab-button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.logo-container {
+  position: relative;
+
+  top: 250px;
+
+  left: 70px;
+  display: inline-block;
+
+  width: 150px;
+  height: auto;
+}
+
+/*
+.bliss-logo-client {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #7b1fa2;
+  padding: 12px;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(123, 31, 162, 0.5);
+}
+
+/* Lista de clientes */
+.clients-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+
+}
+
+/* Búsqueda y filtros */
+.search-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.scrollable-content {
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.top-section {
+  width: 100%;
+  max-width: 350px;
+  background-color: #fceaff;
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Mensaje de "No hay clientes registrados" */
+.no-customers {
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  color: #6e1b93;
+  padding: 20px 0;
+  background-color: #fceaff;
+  border-radius: 10px;
+  margin-top: 250px;
+  font-family: 'Bahnschrift', sans-serif;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-input {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 8px 12px;
+  border: none;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Bahnschrift', sans-serif;
+  min-width: 150px;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: transparent;
+  border: 2px solid #6e1b93;
+  border-radius: 20px;
+  color: #6e1b93;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Bahnschrift', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100px;
+}
+
+.filter-button:hover {
+  background-color: #f3e0ff;
+  cursor: pointer;
+}
+
+/* Lista de clientes */
+.customer-card {
+  background-color: #fceaff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 3px solid #6a1b9a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.4s, transform 0.3s;
+  cursor: pointer;
+  margin: 12px 0;
+}
+
+.customer-card:hover {
+  transform: translateY(-4px);
+  border-color: #7c3aed;
+}
+
+.clients-list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding-bottom: 180px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Diseño de la tarjeta de cliente */
+.customer-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* estilos del id del cliente */
+.customer-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e1bee7;
+  color: #6e1b93;
+  font-weight: bold;
+  text-align: center;
+  line-height: 36px;
+  font-size: 16px;
+  padding: 2px;
+}
+
+.customer-name {
+  font-weight: bold;
+  color: #6e1b93;
+  font-family: 'Bahnschrift', sans-serif;
+}
+
+.customer-address {
+  font-size: 15px;
+  color: #777;
+  font-family: 'Bahnschrift', sans-serif;
+  max-width: 220px;
+  word-wrap: break-word;
+}
+
+.customer-details {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Contenedor del botón flotante */
+.fab-container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+/* Botón de agregar clientes */
+.fab-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid #6e1b93;
+  color: #6e1b93;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.fab-button:hover {
+   transform: translateY(-2px);
+}
+
+/* Footer */
+.footer-text {
+  text-align: center;
+  font-size: 10px;
+  color: #9c27b0;
+  margin-top: 12px;
+}
+
+/* Fondo  para el modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(190, 185, 230, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+/* Contenedor del modal */
+.custom-alert {
+  background-color: #fceaff;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(123, 31, 162, 0.4);
+  font-family: 'Bahnschrift', sans-serif;
+  color: #6e1b93;
+  text-align: center;
+  position: relative;
+}
+
+/* Estilo para títulos del modal */
+.custom-alert h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #6e1b93;
+}
+
+/* Inputs dentro del modal */
+.custom-alert input[type="text"] {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  border: 2px solid #6e1b93;
+  font-size: 1rem;
+  font-family: 'Bahnschrift', sans-serif;
+  color: #6e1b93;
+  box-sizing: border-box;
+}
+
+/* Contenedor de botones centrados vertical y horizontalmente */
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: nowrap;
+}
+
+/* Estilo básico para botones */
+.modal-buttons button {
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  border: 2px solid #6e1b93;
+  background-color: white;
+  color: #6e1b93;
+  font-weight: 600;
+  font-family: 'Bahnschrift', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 180px;
+  max-width: 260px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Hover para botones */
+.modal-buttons button:hover {
+  background-color: #f3e0ff;
+  color: #7b1fa2;
+}
+
+/* Botón eliminar */
+.modal-buttons button.danger {
+  border-color: #d32f2f;
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+.modal-buttons button.danger:hover {
+  background-color: #f8d7da;
+  color: #b71c1c;
+}
+
+/* Responsive: tablets y móviles medianos */
+@media screen and (max-width: 768px) {
+  .content-container {
+    align-items: center;
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .right-column {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    padding: 0;
+  }
+
+  .top-section {
+    max-width: 100%;
+  }
+
+  .clients-list-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* Responsive: tablets y móviles pequeños */
+@media screen and (max-width: 768px) {
+  .search-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .filter-button {
+    width: auto;
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    max-width: 110px;
+    width: 100%;
+
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .fab-container {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .no-customers {
+    margin-top: 100px;
+    font-size: 16px;
+    padding: 16px;
+  }
+}
+
+/* Responsive: móviles muy pequeños */
+@media screen and (max-width: 480px) {
+  .clients-page {
+    padding-top: 100px;
+  }
+
+  .customer-card {
+    padding: 16px;
+  }
+
+  .customer-address {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .customer-details {
+    font-size: 12px;
+  }
+
+  .customer-number {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .fab-button {
+    width: 56px;
+    height: 56px;
+    font-size: 18px;
+
+  }
+
+  .footer-text {
+    font-size: 9px;
+  }
+}

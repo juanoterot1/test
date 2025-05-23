@@ -1,0 +1,68 @@
+[
+  {
+    "idproductos": 1,
+    "nombre": "Pastel de Chocolate",
+    "descripcion": "Delicioso pastel de chocolate con crema y fresas.",
+    "precio": 150,
+    "imagen": "https://www.animalgourmet.com/wp-content/uploads/2020/08/AG-Pastel-chocolate-card-mx-e1598470405313.jpg",
+    "stock": 10
+  },
+  {
+    "idproductos": 2,
+    "nombre": "Cupcake de Vainilla",
+    "descripcion": "Cupcake suave de vainilla con frosting de crema.",
+    "precio": 30,
+    "imagen": "https://origin.cronosmedia.glr.pe/large/2020/10/26/lg_5f9721983619341ea427baf5.jpg",
+    "stock": 25
+  },
+
+  {
+    "idproductos": 3,
+    "nombre": "Tarta de Fresas",
+    "descripcion": "Base crocante con crema pastelera y fresas frescas.",
+    "precio": 120,
+    "imagen": "https://th.bing.com/th/id/R.7e60986c3d92432bf67fb617cb2ed75c?rik=f6DX3q0gYT3%2f4Q&riu=http%3a%2f%2f3.bp.blogspot.com%2f-7fOiOC8_Akk%2fUzCJMSmqoII%2fAAAAAAAAbPo%2f3o3GipYHM8M%2fs1600%2fDSC_4230.jpg&ehk=07tVl0DGXR8db2UR5hbB7%2fpzywH%2f2LNpSl%2fFFw4hUNc%3d&risl=&pid=ImgRaw&r=0",
+    "stock": 8
+  },
+  {
+    "idproductos": 4,
+    "nombre": "Cheesecake de Maracuyá",
+    "descripcion": "Cremoso cheesecake con cobertura de maracuyá natural.",
+    "precio": 130,
+    "imagen": "https://d1uz88p17r663j.cloudfront.net/original/bb387e1853a222d1219a5e8bafa98c7e_cheesecake-de-maracuya.png",
+    "stock": 12
+  },
+  {
+    "idproductos": 5,
+    "nombre": "Macarons de Colores",
+    "descripcion": "Delicados macarons franceses con variados sabores.",
+    "precio": 15,
+    "imagen": "https://postresrapidos.net/wp-content/uploads/2015/05/macarons-de-colores.jpg",
+    "stock": 40
+  },
+  {
+    "idproductos": 6,
+    "nombre": "Brownies con Nueces",
+    "descripcion": "Brownies húmedos con trozos de nueces tostadas.",
+    "precio": 45,
+    "imagen": "https://th.bing.com/th/id/OIP.xj7NVobqnPfYvPVj7w0AXAHaEK?cb=iwc2&rs=1&pid=ImgDetMain",
+    "stock": 15
+  },
+  {
+    "idproductos": 7,
+    "nombre": "Rollitos de Canela",
+    "descripcion": "Rollitos esponjosos con glaseado de vainilla.",
+    "precio": 35,
+    "imagen": "https://th.bing.com/th/id/R.dcc074f33bd426be6498cdcd156331f7?rik=m97Hcvn4ZN0nRg&pid=ImgRaw&r=0",
+    "stock": 20
+  },
+  {
+    "idproductos": 8,
+    "nombre": "Tarta de Limón",
+    "descripcion": "Tarta refrescante con crema de limón y merengue.",
+    "precio": 110,
+    "imagen": "https://th.bing.com/th/id/R.1b2058f681276f7c05c3eef676c23ba7?rik=Oked50rYhgnu3Q&pid=ImgRaw&r=0",
+    "stock": 9
+  }
+ 
+]

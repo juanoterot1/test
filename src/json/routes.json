@@ -1,0 +1,74 @@
+[
+  {
+    "idRuta": 1,
+    "nombreRuta": "Ruta Norte",
+    "estadoRuta": "Activa",
+    "ultimaModificacion": "2025-04-22T14:00:00",
+    "repartidorAsignado": 101,
+    "historialEntregas": [],
+    "clientesAsignados": []
+  },
+  {
+    "idRuta": 2,
+    "nombreRuta": "Ruta Sur",
+    "estadoRuta": "Inactiva",
+    "ultimaModificacion": "2025-04-20T10:30:00",
+    "repartidorAsignado": 102,
+    "historialEntregas": [],
+    "clientesAsignados": []
+  },
+  {
+    "idRuta": 3,
+    "nombreRuta": "Ruta Centro",
+    "estadoRuta": "Activa",
+    "ultimaModificacion": "2025-04-25T09:15:00",
+    "repartidorAsignado": 103,
+    "historialEntregas": [],
+    "clientesAsignados": []
+  },
+  {
+    "idRuta": 4,
+    "nombreRuta": "Ruta Pampalinda",
+    "estadoRuta": "Activa",
+    "ultimaModificacion": "2025-04-25T10:45:00",
+    "repartidorAsignado": 104,
+    "historialEntregas": [],
+    "clientesAsignados": []
+  },
+  {
+    "idRuta": 5,
+    "nombreRuta": "Ruta Palmira",
+    "estadoRuta": "Inactiva",
+    "ultimaModificacion": "2025-04-25T12:00:00",
+    "repartidorAsignado": 105,
+    "historialEntregas": [],
+    "clientesAsignados": []
+  },
+  {
+    "idRuta": 6,
+    "nombreRuta": "Ruta Occidente",
+    "estadoRuta": "Activa",
+    "ultimaModificacion": "2025-04-25T13:20:00",
+    "repartidorAsignado": 106,
+    "historialEntregas": [],
+    "clientesAsignados": []
+  },
+  {
+    "idRuta": 7,
+    "nombreRuta": "Ruta Oeste",
+    "estadoRuta": "Activa",
+    "ultimaModificacion": "2025-04-25T14:30:00",
+    "repartidorAsignado": 107,
+    "historialEntregas": [],
+    "clientesAsignados": []
+  },
+  {
+    "idRuta": 8,
+    "nombreRuta": "Ruta Este",
+    "estadoRuta": "Inactiva",
+    "ultimaModificacion": "2025-04-25T15:45:00",
+    "repartidorAsignado": 108,
+    "historialEntregas": [],
+    "clientesAsignados": []
+  }
+]
